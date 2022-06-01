@@ -33,5 +33,10 @@ public class MoveXXXinEndOfString {
 		return nonselected.toString() + selected.toString();
 
 	}
+	
+	private static String shiftChracterSol2(String input, String selectedText, char ch, Character cch) {
+	
 
+	return null;
+	}
 }
