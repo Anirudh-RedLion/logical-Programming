@@ -21,14 +21,56 @@ public class LinkedListSingly {
 		// Delete First & Last
 		deleteLast();
 		displayLinkList();
-		
-		deleteLast();
+
+//		deleteLast();
+		displayLinkList();
+		// 1:11 -1:14
+		// Delete First Node
+		System.out.println("--------------------------------");
+		deleteFirst();
+		displayLinkList();
+		// AddLast Node
+		// 1:16-1-26
+		addLast("TT");
+
+		displayLinkList();
+		addFirst("Anika");
+		displayLinkList();
 		deleteLast();
 		displayLinkList();
+
+	}
+
+	private static void addLast(String data) {
+		// TODO Auto-generated method stub
+
+		Node top = head;
+		Node lastnode =null;
+		Node newNode = new Node(data);
+
+		if(top==null) {
+			head = newNode;
+			return;
+		}
 		
-		deleteLast();
-		displayLinkList();
-		deleteLast();
+		while (top != null) {
+			lastnode=top;
+			top = top.getNext();
+		}
+
+		lastnode.setNext(newNode);
+
+	}
+
+	private static void deleteFirst() {
+		// TODO Auto-generated method stub
+		if (head != null) {
+
+			head = head.getNext();
+
+		} else
+			System.out.println("-- No Noad Present --");
+
 	}
 
 	private static void deleteLast() {
@@ -64,11 +106,11 @@ public class LinkedListSingly {
 	private static void displayLinkList() {
 		// TODO Auto-generated method stub
 		Node top = head;
-		if(head==null) {
-			
+		if (head == null) {
+
 			System.out.println("========= EMPTY LIST ===========");
 		}
-		
+
 		int index = 1;
 		while (top != null) {
 
