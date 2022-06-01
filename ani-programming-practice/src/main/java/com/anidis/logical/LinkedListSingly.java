@@ -1,5 +1,7 @@
 package com.anidis.logical;
 
+import java.util.Optional;
+
 public class LinkedListSingly {
 	static Node head = null;
 
@@ -15,15 +17,62 @@ public class LinkedListSingly {
 		addFirst("Deepika");
 		addFirst("Deepika 22 ");
 		displayLinkList();
+
+		// Delete First & Last
+		deleteLast();
+		displayLinkList();
+		
+		deleteLast();
+		deleteLast();
+		displayLinkList();
+		
+		deleteLast();
+		displayLinkList();
+		deleteLast();
+	}
+
+	private static void deleteLast() {
+		// TODO Auto-generated method stub
+		Node top = head;
+		Node lastNode = null;
+//		System.out.println("<< "+head +" | "+head.getNext());
+		if (head == null) {
+			System.out.println("-- NO Node --");
+			return;
+		} else if (head.getNext() == null) {
+			head = null;
+//			System.out.println("-- Deleted Last Node ------");
+			return;
+		}
+
+		while (top.getNext() != null) {
+			lastNode = top;
+//			System.out.println(">> " + lastNode.getData() + " | " + top.getData());
+			top = top.getNext();
+//			System.out.println(">> " + top.getData());
+		}
+
+//		while(top.getNext()!=null) {
+//			
+//			top =top.getNext();
+//		}
+
+		lastNode.setNext(null);
+
 	}
 
 	private static void displayLinkList() {
 		// TODO Auto-generated method stub
 		Node top = head;
-
+		if(head==null) {
+			
+			System.out.println("========= EMPTY LIST ===========");
+		}
+		
+		int index = 1;
 		while (top != null) {
 
-			System.out.print("[ " + top.getNext() + " : " + top.getData() + " ]--");
+			System.out.println("(" + index++ + ") [ " + top.getNext() + " : " + top.getData() + " ]--");
 			top = top.getNext();
 		}
 
@@ -40,7 +89,7 @@ public class LinkedListSingly {
 		}
 		head = firstNode;
 
-		System.out.println("Added >> " + data + " | " + head + " | " + head.getNext());
+//		System.out.println("Added >> " + data + " | " + head + " | " + head.getNext());
 	}
 
 }
