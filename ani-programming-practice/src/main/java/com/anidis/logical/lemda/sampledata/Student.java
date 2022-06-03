@@ -1,4 +1,4 @@
-package com.anidis.logical.lemda;
+package com.anidis.logical.lemda.sampledata;
 
 // 10:41
 public class Student {

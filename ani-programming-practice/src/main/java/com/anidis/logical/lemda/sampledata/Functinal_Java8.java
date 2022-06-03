@@ -1,4 +1,4 @@
-package com.anidis.logical.lemda;
+package com.anidis.logical.lemda.sampledata;
 
 import java.util.ArrayList;
 import java.util.List;
