@@ -37,7 +37,7 @@ public class StreamAll {
 		System.out.println("====================");
 		System.out.println(activityNames);
 		
-		System.out.println("------11-----------");
+		System.out.println("------1 Use Flat MAP-----------");
 //		Simple disply with use stream foreach
 		students.stream().map(s1 -> s1.getActivity())
 		.flatMap(List:: stream)
@@ -45,11 +45,20 @@ public class StreamAll {
 		.forEach(System.out::println);
 		
 		
-		System.out.println("--------------2----------");
+		System.out.println("--------------2 Normal map with Peek----------");
 //		use map with peek to display response
 		students.stream().map(s3 -> s3.getName()).peek(System.out::println).collect(Collectors.toList());
-		// Create Map
+		
+		
+		
+		System.out.println("---------- 3 Create Map----");
+		// Create Map with Student Name with List Activity
 
+		
+		
+		
+		
+		
 		// Short Student As per Depatment
 
 		// return Location
