@@ -1,5 +1,6 @@
 package com.anidis.logical.lemda.stream;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -62,11 +63,21 @@ public class StreamAll {
 				e.getKey() + " | " + e.getValue().stream().map(Activity::getName).collect(Collectors.toList())));
 
 		// Short Student As per Depatment
+		
+		
+		
+		
 
 		// return Location
 
 		//
 
+		
+		// GroupBy
+		
+		List<String> studentName = students.stream().collect(Collectors.mapping(Student::getName, Collectors.toList()));
+
+		System.out.println("Nmaes : "+studentName);
 	}
 
 }
