@@ -1,5 +1,7 @@
 package com.anidis.logical.lemda.sampledata;
 
+import java.util.List;
+
 // 10:41
 public class Student {
 
@@ -7,6 +9,18 @@ public class Student {
 	private String name;
 	private Integer id;
 	private String group;
+	private List<Activity> activity;
+
+
+
+	public Student(int grade, String name, Integer id, String group, List<Activity> activity) {
+		super();
+		this.grade = grade;
+		this.name = name;
+		this.id = id;
+		this.group = group;
+		this.activity = activity;
+	}
 
 	public Student() {
 		super();
@@ -21,6 +35,15 @@ public class Student {
 		this.group = group;
 	}
 
+	
+	public List<Activity> getActivity() {
+		return activity;
+	}
+
+	public void setActivity(List<Activity> activity) {
+		this.activity = activity;
+	}
+	
 	public int getGrade() {
 		return grade;
 	}
@@ -51,6 +74,11 @@ public class Student {
 
 	public void setGroup(String group) {
 		this.group = group;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [grade=" + grade + ", name=" + name + ", id=" + id + ", group=" + group + "]";
 	}
 
 }
