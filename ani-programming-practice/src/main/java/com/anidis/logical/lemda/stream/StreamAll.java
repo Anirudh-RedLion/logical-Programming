@@ -1,6 +1,7 @@
 package com.anidis.logical.lemda.stream;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.anidis.logical.lemda.sampledata.Activity;
@@ -54,11 +55,12 @@ public class StreamAll {
 		System.out.println("---------- 3 Create Map----");
 		// Create Map with Student Name with List Activity
 
-		
-		
-		
-		
-		
+		Map<String, List<Activity>> studentActivity = students.stream()
+				.collect(Collectors.toMap(Student::getName, Student::getActivity));
+
+		studentActivity.entrySet().stream().forEach(e -> System.out.println(
+				e.getKey() + " | " + e.getValue().stream().map(Activity::getName).collect(Collectors.toList())));
+
 		// Short Student As per Depatment
 
 		// return Location
