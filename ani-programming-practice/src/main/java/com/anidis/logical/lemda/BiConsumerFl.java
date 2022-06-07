@@ -2,7 +2,7 @@ package com.anidis.logical.lemda;
 
 import java.util.function.BiConsumer;
 
-import com.anidis.logical.lemda.sampledata.Functinal_Java8;
+import com.anidis.logical.lemda.sampledata.Functional_Java8;
 import com.anidis.logical.lemda.sampledata.Student;
 
 //11:37 -47
@@ -18,7 +18,7 @@ public class BiConsumerFl {
 		};
 
 		System.out.println("-------- OUTPut --------");
-		Functinal_Java8.getAllStudents().forEach(s -> studentConsumer.accept(s, "Hello"));
+		Functional_Java8.getAllStudents().forEach(s -> studentConsumer.accept(s, "Hello"));
 
 	}
 

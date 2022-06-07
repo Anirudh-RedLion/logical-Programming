@@ -10,8 +10,18 @@ public class Student {
 	private Integer id;
 	private String group;
 	private List<Activity> activity;
+	private List<Department> department;
 
-
+	public Student(int grade, String name, Integer id, String group, List<Activity> activity,
+			List<Department> department) {
+		super();
+		this.grade = grade;
+		this.name = name;
+		this.id = id;
+		this.group = group;
+		this.activity = activity;
+		this.department = department;
+	}
 
 	public Student(int grade, String name, Integer id, String group, List<Activity> activity) {
 		super();
@@ -35,7 +45,14 @@ public class Student {
 		this.group = group;
 	}
 
-	
+	public List<Department> getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(List<Department> department) {
+		this.department = department;
+	}
+
 	public List<Activity> getActivity() {
 		return activity;
 	}
@@ -43,7 +60,7 @@ public class Student {
 	public void setActivity(List<Activity> activity) {
 		this.activity = activity;
 	}
-	
+
 	public int getGrade() {
 		return grade;
 	}

@@ -2,7 +2,7 @@ package com.anidis.logical.lemda;
 
 import java.util.function.Consumer;
 
-import com.anidis.logical.lemda.sampledata.Functinal_Java8;
+import com.anidis.logical.lemda.sampledata.Functional_Java8;
 import com.anidis.logical.lemda.sampledata.Student;
 
 public class ConsumerFl {
@@ -26,13 +26,13 @@ public class ConsumerFl {
 		// Senario 2nd : each Student  pass in consumer
 		System.out.print("output 2 : ");
 
-		Functinal_Java8.getAllStudents().forEach(idConsumer);
+		Functional_Java8.getAllStudents().forEach(idConsumer);
 
 		System.out.println();
 		// Senario 3rd > Function chaining : each Student  pass in consumer
 		System.out.println("----- output 3 ------");
 
-		Functinal_Java8.getAllStudents().forEach(idConsumer.andThen(gradeConsumer));
+		Functional_Java8.getAllStudents().forEach(idConsumer.andThen(gradeConsumer));
 		
 		
 		// Void return method we can not call in SYSOUT statment

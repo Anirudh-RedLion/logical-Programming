@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 import com.anidis.logical.lemda.sampledata.Activity;
-import com.anidis.logical.lemda.sampledata.Functinal_Java8;
+import com.anidis.logical.lemda.sampledata.Functional_Java8;
 import com.anidis.logical.lemda.sampledata.Student;
 
 // 6:06 pm
@@ -30,13 +30,13 @@ public class FunctionFl {
 
 	public static void main(String args[]) {
 
-		Map<String, Student> stuMap = studentFunction.apply(Functinal_Java8.getAllStudents());
+		Map<String, Student> stuMap = studentFunction.apply(Functional_Java8.getAllStudents());
 		displayStudent(stuMap);
 
 		Function<Student, List<Activity>> stuNameFunction = Student::getActivity;
 		// Method Refrence
 		System.out.println("Activity --------------");
-		System.out.println(stuNameFunction.apply(Functinal_Java8.getAllStudents().get(1)));
+		System.out.println(stuNameFunction.apply(Functional_Java8.getAllStudents().get(1)));
 
 	}
 
