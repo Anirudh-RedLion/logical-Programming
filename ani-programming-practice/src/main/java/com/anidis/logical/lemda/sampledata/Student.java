@@ -98,4 +98,9 @@ public class Student {
 		return "Student [grade=" + grade + ", name=" + name + ", id=" + id + ", group=" + group + "]";
 	}
 
+	
+	public Activity getActivity1() {
+		return activity.get(0);
+	}
+	
 }
