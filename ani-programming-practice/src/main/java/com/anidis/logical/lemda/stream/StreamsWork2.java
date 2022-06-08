@@ -2,6 +2,7 @@ package com.anidis.logical.lemda.stream;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -41,17 +42,31 @@ public class StreamsWork2 {
 		System.out.println("============ All Match ==============");
 		boolean is5PlusGrade = students.stream().allMatch(s -> s.getGrade() >= 5);
 		System.out.println(is5PlusGrade);
-		// Any Match
 
-		is5PlusGrade = students.stream().allMatch(s -> s.getGrade() >= 5);
+		// Any Match
+		is5PlusGrade = students.stream().anyMatch(s -> s.getGrade() >= 5);
 		System.out.println(is5PlusGrade);
 
 		// Non Match
+		is5PlusGrade = students.stream().noneMatch(s -> s.getGrade() >= 5);
+		System.out.println(is5PlusGrade);
 
+		System.out.println("================= Find First & Find Any ===========");
+		
 		// Find First
-
-		// Find any
-
+		Optional<Student> stu = students.stream().filter(s -> s.getGrade() > 3).findFirst();
+		if (stu.isPresent()) {
+			System.out.println("Find First : " + stu.get());
+		}		
+		
+		
+		// Find Any no diffrence found , both reponse same
+		 stu = students.stream().filter(s -> s.getGrade() > 3).findAny();
+		if (stu.isPresent()) {
+			System.out.println("Find Any : " + stu.get());
+		}		
+		
+		
 		// custome Sort
 
 	}

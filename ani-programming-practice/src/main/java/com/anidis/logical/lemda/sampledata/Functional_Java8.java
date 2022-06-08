@@ -9,7 +9,7 @@ public class Functional_Java8 {
 
 		// Basic way to insertion
 		List<Student> studentList = new ArrayList<>();
-		studentList.add(new Student(3, "Pankaj Gup", 12344, "IT", createActivity("AI", "Manufacturing"),
+		studentList.add(new Student(5, "Pankaj Gup", 12344, "IT", createActivity("AI", "Manufacturing"),
 				createDepatment("IT", "Delhi", "Lucknow")));
 		studentList.add(new Student(5, "Ram Ji", 44444, "CS", createActivity("Java", "HTML"),
 				createDepatment("CS", "Kolkata", "Kochi")));
