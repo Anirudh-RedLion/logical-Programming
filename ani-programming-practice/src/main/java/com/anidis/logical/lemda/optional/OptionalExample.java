@@ -80,6 +80,18 @@ public class OptionalExample {
 
 			System.out.println("ACT : "+act);
 			
+			
+		// Another as per my Undesrstanding
+			
+			
+		List<Stream<Activity>> ac1=	Optional.ofNullable(students)
+				.orElse(List.of())
+			.stream()
+			.map(Student::getActivity)
+			.map(List::stream)
+			.collect(Collectors.toList());
+			
+			
 		// optional orElseThrow
 
 	}
