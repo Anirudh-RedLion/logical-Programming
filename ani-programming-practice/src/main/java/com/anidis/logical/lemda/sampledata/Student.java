@@ -93,12 +93,14 @@ public class Student {
 		this.group = group;
 	}
 
-	@Override
-	public String toString() {
-		return "Student [grade=" + grade + ", name=" + name + ", id=" + id + ", group=" + group + "]";
-	}
 
 	
+	@Override
+	public String toString() {
+		return "Student [grade=" + grade + ", name=" + name + ", id=" + id + ", group=" + group + ", activity="
+				+ activity + ", department=" + department + "]";
+	}
+
 	public Activity getActivity1() {
 		return activity.get(0);
 	}
